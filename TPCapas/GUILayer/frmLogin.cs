@@ -20,7 +20,8 @@ namespace TPCapas {
 			string username = txtUsuario.Text;
 			string pass = txtContra.Text;
 
-			SanitizarInputs();
+			if (!SanitizarInputs())
+				return;
 
 			UsuarioBusiness usuarioBusiness = new UsuarioBusiness();
 			Usuario u = usuarioBusiness.ValidarUsuario(username, pass);
@@ -33,11 +34,16 @@ namespace TPCapas {
 			}
 		}
 
-		private void SanitizarInputs() {
-			if (txtUsuario.Text == "")
+		private bool SanitizarInputs() {
+			if (txtUsuario.Text == "") {
 				MessageBox.Show("Input no valido", "Inserte su usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			else if (txtContra.Text == "")
+				return false;
+			} else if (txtContra.Text == "") {
 				MessageBox.Show("Input no valido", "Inserte su contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return false;
+			}
+
+			return true;
 		}
 
 		private void btnCancelar_Click(object sender, EventArgs e) {
