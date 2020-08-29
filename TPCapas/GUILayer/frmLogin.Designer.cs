@@ -24,10 +24,12 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.label1 = new System.Windows.Forms.Label();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.txtUsuario = new System.Windows.Forms.TextBox();
+			this.txtContra = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
+			this.btnAceptar = new System.Windows.Forms.Button();
+			this.btnCancelar = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -38,23 +40,20 @@
 			this.label1.Size = new System.Drawing.Size(46, 13);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Usuario:";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
-			// textBox1
+			// txtUsuario
 			// 
-			this.textBox1.Location = new System.Drawing.Point(104, 34);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(249, 20);
-			this.textBox1.TabIndex = 1;
-			this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+			this.txtUsuario.Location = new System.Drawing.Point(104, 34);
+			this.txtUsuario.Name = "txtUsuario";
+			this.txtUsuario.Size = new System.Drawing.Size(249, 20);
+			this.txtUsuario.TabIndex = 1;
 			// 
-			// textBox2
+			// txtContra
 			// 
-			this.textBox2.Location = new System.Drawing.Point(104, 60);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(249, 20);
-			this.textBox2.TabIndex = 3;
-			this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+			this.txtContra.Location = new System.Drawing.Point(104, 60);
+			this.txtContra.Name = "txtContra";
+			this.txtContra.Size = new System.Drawing.Size(249, 20);
+			this.txtContra.TabIndex = 3;
 			// 
 			// label2
 			// 
@@ -64,7 +63,6 @@
 			this.label2.Size = new System.Drawing.Size(64, 13);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Contraseña:";
-			this.label2.Click += new System.EventHandler(this.label2_Click);
 			// 
 			// label3
 			// 
@@ -76,15 +74,36 @@
 			this.label3.Text = "Bienvenido al sistema";
 			this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
+			// btnAceptar
+			// 
+			this.btnAceptar.Location = new System.Drawing.Point(13, 86);
+			this.btnAceptar.Name = "btnAceptar";
+			this.btnAceptar.Size = new System.Drawing.Size(148, 31);
+			this.btnAceptar.TabIndex = 5;
+			this.btnAceptar.Text = "Aceptar";
+			this.btnAceptar.UseVisualStyleBackColor = true;
+			this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
+			// 
+			// btnCancelar
+			// 
+			this.btnCancelar.Location = new System.Drawing.Point(205, 86);
+			this.btnCancelar.Name = "btnCancelar";
+			this.btnCancelar.Size = new System.Drawing.Size(148, 31);
+			this.btnCancelar.TabIndex = 6;
+			this.btnCancelar.Text = "Cancelar";
+			this.btnCancelar.UseVisualStyleBackColor = true;
+			// 
 			// frmLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(365, 94);
+			this.ClientSize = new System.Drawing.Size(365, 129);
+			this.Controls.Add(this.btnCancelar);
+			this.Controls.Add(this.btnAceptar);
 			this.Controls.Add(this.label3);
-			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.txtContra);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox1);
+			this.Controls.Add(this.txtUsuario);
 			this.Controls.Add(this.label1);
 			this.Name = "frmLogin";
 			this.Text = "Login";
@@ -96,10 +115,12 @@
 		#endregion
 
 		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.TextBox txtUsuario;
+		private System.Windows.Forms.TextBox txtContra;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Button btnAceptar;
+		private System.Windows.Forms.Button btnCancelar;
 	}
 }
 
