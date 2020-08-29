@@ -39,5 +39,10 @@ namespace TPCapas {
 			else if (txtContra.Text == "")
 				MessageBox.Show("Input no valido", "Inserte su contraseña", MessageBoxButtons.OK, MessageBoxIcon.Error);
 		}
+
+		private void btnCancelar_Click(object sender, EventArgs e) {
+			MessageBox.Show("OK", "Bye", MessageBoxButtons.OK, MessageBoxIcon.Information);
+			Close();
+		}
 	}
 }
